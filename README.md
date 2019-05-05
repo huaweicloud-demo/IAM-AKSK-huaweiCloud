@@ -10,7 +10,7 @@
 ## 1.获取token
   url格式：POST  /v3/auth/tokens 
   Content-Type: application/json   
-  Token：Header的~X-Auth-Token~中。
+  Token：`Header`的`X-Auth-Token`
   
   请求样式：  
   {
@@ -40,4 +40,27 @@
 ## 2.获取ak/sk：
   url格式：POST  /v3.0/OS-CREDENTIAL/securitytokens  
   
+  请求参数：
+  {
+    "auth": {
+        "identity": {
+            "methods": [
+                "token"
+            ],
+            "token": {
+                "id": "MIIDkgYJKoZIhvcNAQcCoIIDgzCCA38CAQExDTALBglghkgBZQMEAgEwgXXXXX...",
+                "duration-seconds": "900"
+            }
+        }
+    }
+}
   
+结果实例：
+{
+  "credential": {
+    "access": "NQC51NFINJS1JXX...",
+    "secret": "EY74MByPZ46kTRJL9ay5DskqXX...",
+    "expires_at": "2017-04-17T07:55:18.575000Z",
+    "securitytoken": "gAAAAABY9GbWUaGtoa9DPj7_dE4qUSnAXXX..."
+  }
+}
