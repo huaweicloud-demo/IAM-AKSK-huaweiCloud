@@ -8,8 +8,9 @@
 * 实现步骤：获取用户Token----->获取临时AK/SK。  
 
 ## 1.获取token
-  url格式：POST https://iam.cn-north-1.myhuaweicloud.com/v3/auth/tokens    
-  Content-Type: application/json  
+  url格式：POST  /v3/auth/tokens 
+  Content-Type: application/json   
+  Token：Header的~X-Auth-Token~中。
   
   请求样式：  
   {
@@ -35,6 +36,8 @@
 }
 
 
+
 ## 2.获取ak/sk：
-  url格式：POST /v3.0/OS-CREDENTIAL/securitytokens  
+  url格式：POST  /v3.0/OS-CREDENTIAL/securitytokens  
+  
   
