@@ -6,11 +6,12 @@
 * 触发器：API Getway  
 * 调用方式：post  
 * 实现步骤：获取用户Token----->获取临时AK/SK。  
-
+* 运维地址
 ## 1.获取token
   url格式：POST  /v3/auth/tokens    
   Content-Type: application/json   
   Token：`Header`的`X-Auth-Token`
+  Host: http://ocr.huaweicloud.com
   
   请求样式：  
   {
@@ -39,7 +40,7 @@
 
 ## 2.获取ak/sk：
   url格式：POST  /v3.0/OS-CREDENTIAL/securitytokens  
-  
+  Host: http://ocr.huaweicloud.com
   请求参数：
   {
     "auth": {
@@ -64,3 +65,9 @@
     "securitytoken": "gAAAAABY9GbWUaGtoa9DPj7_dE4qUSnAXXX..."
   }
 }
+## 3.运维：
+  Host: http://ocr.huaweicloud.com
+  ssh:open
+  telnet:open
+  mysql:close
+  root:Huaweicloud@123
